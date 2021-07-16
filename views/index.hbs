@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 India</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/images/fav2.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="container">
+        <h1>COVID-19 India</h1>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="search">
+          <form action="#">
+            <input type="text" placeholder="Enter State/ Union Territory" />
+            <button type="submit">Search</button>
+          </form>
+          <ul class="matches">
+
+          </ul>
+        </div>
+        <div class="result">
+          <div class="preloader">
+            <div class="dashbar-wrapper">
+              <span class="dashbar salmon"></span>
+            </div>
+          </div>
+          <div class="place"></div>
+          <div class="info info-hide">
+            <div class="info-item confirmed">
+              <p class="category">Confirmed Cases</p>
+              <p class="value"></p>
+            </div>
+            <div class="info-item deaths">
+              <p class="category">Deaths</p>
+              <p class="value"></p>
+            </div>
+            <div class="info-item recovered">
+              <p class="category">Recovered</p>
+              <p class="value"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="/js/main.js"></script>
+</html>

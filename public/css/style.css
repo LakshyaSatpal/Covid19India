@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  font-family: "Cairo", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+nav.navigation {
+  background-color: rgb(37, 37, 37);
+}
+
+nav.navigation .container {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  min-height: 85vh;
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  background-color: #fd6464;
+}
+
+main::after {
+  content: "";
+  display: block;
+  /* background: url(/images/covid-cells.jpg) no-repeat center center/cover; */
+  /* filter: blur(8px); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.85;
+}
+
+main .search {
+  width: 70%;
+  margin: auto;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background-color: rgb(37, 37, 37);
+  box-shadow: 0 2px 1rem rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.search input {
+  display: block;
+  width: 80%;
+  border-radius: 10px;
+  padding: 0.8rem 10px;
+  font-size: 1.2rem;
+  /* background-color: rgb(37, 37, 37); */
+  outline: none;
+}
+
+.search input:focus {
+  background-color: rgb(238, 238, 238);
+}
+
+.search form {
+  display: flex;
+}
+
+::placeholder {
+  color: #777;
+}
+
+.search form button {
+  flex: 1;
+  border-radius: 10px;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  border: none;
+  /* background-image: linear-gradient(to right, #fd6464, #ff9e9e); */
+  background-color: #fd6464;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search form button:hover {
+  background-color: #863737;
+  color: #fff;
+}
+
+.result {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  width: 60%;
+  margin: 2rem auto;
+  box-shadow: 0 2px 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.result .info-item {
+  font-size: 1.3rem;
+  display: flex;
+  font-family: "Roboto";
+  margin-top: 1rem;
+}
+
+.info-item .category {
+  text-align: left;
+  flex: 1;
+}
+
+.info-item .value {
+  text-align: right;
+  flex: 1;
+}
+
+.place {
+  text-align: left;
+  font-size: 1.5rem;
+  /* color: #fd6464; */
+  color: #777;
+  font-family: "Roboto";
+}
+
+.info.info-hide {
+  visibility: hidden;
+}
+
+.matches {
+  width: 80%;
+  /* border-radius: 0 0 10px 10px; */
+  border-radius: 10px;
+}
+
+.matches li {
+  padding: 10px;
+  background-color: rgb(238, 238, 238);
+  font-family: "Roboto";
+  list-style: none;
+  /* border-bottom: 2px solid #777; */
+  cursor: pointer;
+  /* border-radius: 10px; */
+}
+
+.matches li.only-match {
+  border-radius: 10px !important;
+}
+
+.matches li:nth-child(2n) {
+  background-color: #ff9a9a;
+}
+
+.matches li:nth-child(2n + 1) {
+  background-color: #e08989;
+}
+
+.matches li:last-child {
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.matches li:hover {
+  background-color: rgb(255, 119, 119);
+}
+
+.matches li:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.matches li .highlight {
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+}
+
+.preloader {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dashbar-wrapper {
+  width: 150px;
+  height: 3px;
+  background-color: #f7f7f7;
+  display: inline-block;
+  border-radius: 5%;
+  /* border: 1px solid #f0f0f0; */
+  padding: 0;
+  position: relative;
+}
+
+.dashbar {
+  display: inline-block;
+  height: 100%;
+  width: 50px;
+  position: absolute;
+  left: 0px;
+  background-color: #fd6464;
+  top: 0px;
+  animation: loader-dashbar 0.8s ease-in-out infinite alternate;
+}
+@keyframes loader-dashbar {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100px;
+  }
+}
